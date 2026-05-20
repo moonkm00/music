@@ -3,7 +3,6 @@
 .env
 
 # PyTorch weights & caches (Large files)
-*.pth
 __pycache__/
 .pytest_cache/
 
