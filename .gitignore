@@ -1,0 +1,20 @@
+# Streamlit Secrets (DO NOT push/upload keys)
+.streamlit/secrets.toml
+.env
+
+# PyTorch weights & caches (Large files)
+*.pth
+__pycache__/
+.pytest_cache/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Local datasets or generated data
+dummy_dataset/
+oasis_images/
+osfstorage-archive/
+dataset.csv
+*log

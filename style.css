@@ -1,0 +1,171 @@
+/* 전체 라이트 모드 테마 및 배경 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+html, body, [data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #f5f7fb 0%, #eef2f7 50%, #e0e7ff 100%);
+    color: #1e293b;
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+}
+
+/* 텍스트 요소 강제 색상 지정 */
+h1, h2, h3, h4, h5, h6, p, li, span, label {
+    color: #1e293b !important;
+}
+
+/* 헤더 스타일링 */
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+
+/* 타벨 컨트롤 가리기 */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* 사이드바 및 토글컨트롤 완전 제거 */
+/* 메인 앱 컨테이너 폭을 넓혀 공간감과 해상도를 극대화 */
+[data-testid="stAppViewBlockContainer"] {
+    max-width: 1400px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+
+/* 업로드된 이미지 크기 제한 및 고정 정렬 - 모든 자식 div 가로 100% 동기화 */
+[data-testid="stImage"], [data-testid="stImage"] > div, [data-testid="stImage"] img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+[data-testid="stImage"] img {
+    height: 500px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    display: block !important;
+}
+
+/* 타이틀 및 폰트 강조 */
+.premium-title {
+    background: linear-gradient(90deg, #1DB954 0%, #059669 50%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: -1.5px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.premium-subtitle {
+    color: #4b5563 !important;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+/* 라이트 글래스모피즘 컨테이너 */
+.glass-card, [data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    border-radius: 20px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06) !important;
+    margin-bottom: 1.5rem !important;
+    overflow: hidden !important;
+}
+
+/* Streamlit 내장 내부 수직 블록의 추가 이중 패딩 강제 제거 */
+[data-testid="stVerticalBlockBorderWrapper"] > div > [data-testid="stVerticalBlock"] {
+    padding: 0px !important;
+    gap: 14px !important;
+}
+
+/* 드래그 앤 드롭 업로더 커스텀 */
+[data-testid="stFileUploader"] {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border: 2px dashed rgba(29, 185, 84, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    transition: all 0.3s ease !important;
+}
+[data-testid="stFileUploader"]:hover {
+    border-color: #1DB954 !important;
+    background: rgba(29, 185, 84, 0.08) !important;
+}
+
+/* 업로드 박스 텍스트 색 변경 */
+[data-testid="stFileUploader"] label {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+}
+[data-testid="stFileUploader"] div {
+    color: #4b5563 !important;
+}
+
+/* 분위기 배지 스티커 */
+.vibe-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #1DB954 0%, #059669 100%);
+    color: white !important;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px;
+    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.2);
+}
+.color-dot {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.7);
+    margin: 0 5px;
+    vertical-align: middle;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 라이트 스포티파이 카드 */
+.music-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 247, 250, 0.95) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+.music-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 20px rgba(29, 185, 84, 0.1) !important;
+    border-color: rgba(29, 185, 84, 0.3) !important;
+}
+.music-info {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+.music-title {
+    color: #111827 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+}
+.music-artist {
+    color: #4b5563 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+}
+.music-desc {
+    color: #6b7280 !important;
+    font-size: 0.85rem !important;
+    font-style: italic !important;
+}
